@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #19a2ae;
+  width: auto;
+  height: auto;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.bg {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.bg .bgTop {
+  position: absolute;
+  top: -600px;
+  left: -750px;
+  background: url("../images/bg-pattern-top.svg");
+  background-repeat: no-repeat;
+  width: 978px;
+  height: 978px;
+}
+.bg .bgBottom {
+  position: absolute;
+  bottom: -600px;
+  right: -750px;
+  position: absolute;
+  background: url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat;
+  width: 978px;
+  height: 978px;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 9px;
+  box-shadow: 3px 5px 19px rgba(0, 0, 0, 0.5);
+  background: snow;
+  overflow: hidden;
+}
+.container .card-header {
+  background: url("../images/bg-pattern-card.svg") center no-repeat;
+  width: 310px;
+  height: 120px;
+}
+.container .card-content {
+  text-align: center;
+  border-bottom: 1px solid #969696;
+  padding-bottom: 30px;
+}
+.container .card-content .profile {
+  background: url("../images/image-victor.jpg");
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 5px solid snow;
+  margin-left: 107px;
+  margin-top: -50px;
+}
+.container .card-content .username {
+  margin-top: 25px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.container .card-content .username span {
+  font-weight: 400;
+  color: #6a6f81;
+}
+.container .card-content .city {
+  margin-top: 11px;
+  font-weight: 400;
+  color: #6a6f81;
+}
+.container .card-footer {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 25px;
+}
+.container .card-footer div {
+  display: flex;
+  flex-direction: column;
+}
+.container .card-footer div span:first-child {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+.container .card-footer div span:last-child {
+  margin-top: 7px;
+  font-size: 0.9rem;
+  color: #6a6f81;
+}
+
+.attribution {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 7px;
+  background: #6a6f81;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #19a2ae;
+}
+.attribution a:hover {
+  color: snow;
+}
+
+@media (min-width: 576px) {
+  .bg .bgTop {
+    top: -500px;
+    left: -675px;
+  }
+  .bg .bgBottom {
+    bottom: -500px;
+    right: -675px;
+  }
+}
+@media (min-width: 768px) {
+  .bg .bgTop {
+    top: -500px;
+    left: -550px;
+  }
+  .bg .bgBottom {
+    bottom: -500px;
+    right: -550px;
+  }
+}
+@media (min-width: 992px) {
+  .bg .bgTop {
+    left: -450px;
+  }
+  .bg .bgBottom {
+    right: -450px;
+  }
+}
+@media (min-width: 1271px) {
+  .bg .bgTop {
+    left: -250px;
+  }
+  .bg .bgBottom {
+    right: -250px;
+  }
+}
+
+/*# sourceMappingURL=stilo.css.map */
