@@ -5,23 +5,25 @@
   box-sizing: border-box;
 }
 
-html {
+html,
+body {
   width: 100%;
   height: 100%;
 }
 
 body {
   background: #19a2ae;
-  width: auto;
-  height: auto;
   font-family: "Kumbh Sans", sans-serif;
 }
 
 .bg {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   overflow: hidden;
+  z-index: -1;
 }
 .bg .bgTop {
   position: absolute;
@@ -44,24 +46,33 @@ body {
 }
 
 .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  min-height: calc(100% - 30px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .card {
+  max-width: 330px;
+  width: 100%;
+  background: snow;
   border-radius: 9px;
   box-shadow: 3px 5px 19px rgba(0, 0, 0, 0.5);
-  background: snow;
   overflow: hidden;
+  margin: 50px auto;
+}
+.container .card > div {
+  width: 100%;
 }
 .container .card-header {
   background: url("../images/bg-pattern-card.svg") center no-repeat;
-  width: 310px;
-  height: 120px;
+  background-size: cover;
+  height: 130px;
 }
 .container .card-content {
   text-align: center;
-  border-bottom: 1px solid #969696;
-  padding-bottom: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #d6d6d6;
 }
 .container .card-content .profile {
   background: url("../images/image-victor.jpg");
@@ -69,7 +80,8 @@ body {
   height: 96px;
   border-radius: 50%;
   border: 5px solid snow;
-  margin-left: 107px;
+  margin-left: 50%;
+  transform: translate(-50%);
   margin-top: -50px;
 }
 .container .card-content .username {
@@ -107,12 +119,12 @@ body {
 }
 
 .attribution {
-  padding: 7px;
+  line-height: 30px;
+  height: 30px;
   background: #6a6f81;
   font-size: 11px;
   text-align: center;
 }
-
 .attribution a {
   color: #19a2ae;
 }
@@ -126,7 +138,7 @@ body {
     left: -675px;
   }
   .bg .bgBottom {
-    bottom: -500px;
+    bottom: -550px;
     right: -675px;
   }
 }
@@ -136,7 +148,7 @@ body {
     left: -550px;
   }
   .bg .bgBottom {
-    bottom: -500px;
+    bottom: -600px;
     right: -550px;
   }
 }
@@ -153,6 +165,7 @@ body {
     left: -250px;
   }
   .bg .bgBottom {
+    bottom: -550px;
     right: -250px;
   }
 }
